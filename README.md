@@ -3,10 +3,10 @@
 ## Running the script
 I provided a CLI-like interface for running the script. The program supports 2 features (but can easily be extended):
 1. Duplicates Removing - replaces all duplicates with a .symlink and leaves only one of the copies as the original file
-`python3 main.py remove_duplicates --path=<path>`
+`poetry run start remove_duplicates --path=<path>`
 2. Duplicates Scanner - scans the file system and prints the duplicates to stdout (this is the default implementation)
-`python3 main.py identify_duplicates  --path=<path>`
-
+`poetry run start identify_duplicates  --path=<path>`
+3. Running tests - run `poetry run pytest`
 ## Notes
 ### Algorithm Description
 The algorithm compares duplicate files based on their content (not much flexibility, it's pretty much an all-or-nothing comparison).
