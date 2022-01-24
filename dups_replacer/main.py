@@ -1,10 +1,10 @@
 import fire
 
-from duplicates_remover import DuplicatesRemover
-from duplicates_scanner import DuplicatesScanner
-from file_system_adapter import FileSystemAdapter
-from files_registry import FileRegistry
-from hash_util import HashUtil
+from .duplicates_remover import DuplicatesRemover
+from .duplicates_scanner import DuplicatesScanner
+from .file_system_adapter import FileSystemAdapter
+from .files_registry import FileRegistry
+from .hash_util import HashUtil
 
 
 def remove_duplicates(path):
@@ -29,5 +29,9 @@ def identify_duplicates(path):
     duplicates_locator.scan_files_for_duplicates()
 
 
-if __name__ == '__main__':
+def main():
     fire.Fire()
+
+
+if __name__ == '__main__':
+    main()

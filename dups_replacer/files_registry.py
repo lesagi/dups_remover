@@ -1,6 +1,7 @@
 class FileRegistry:
+    registry = {}
+
     def __init__(self, hash_util):
-        self.registry = {}
         self.hash_util = hash_util
 
     def get_file_key(self, file):

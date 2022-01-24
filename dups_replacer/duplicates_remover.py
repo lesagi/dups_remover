@@ -1,5 +1,5 @@
 import os
-from duplicates_scanner import DuplicatesScanner
+from .duplicates_scanner import DuplicatesScanner
 
 
 class DuplicatesRemover(DuplicatesScanner):
@@ -10,5 +10,6 @@ class DuplicatesRemover(DuplicatesScanner):
 
         file_registry = self.registry.get_file_registry(file_registry_key)
         original_file_path = self.fs_adapter.get_file_full_path(file_registry['dir_path'], file_registry['filename'])
+
         os.remove(duplicate_path)
         os.symlink(original_file_path, duplicate_path)
